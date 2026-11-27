@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olympus Legacy Club | Absensi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="logo">OLP</div>
+      <div>
+        <h1>OLYMPUS <span>LEGACY</span></h1>
+        <p>CLUB ATTENDANCE SYSTEM</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="status">● ONLINE ATTENDANCE</div>
+      <h2>Daftar Kehadiran</h2>
+      <p class="description">
+        Silakan isi kehadiran anggota Olympus Legacy Club.
+      </p>
+
+      <div class="date-box">
+        <small>TANGGAL HARI INI</small>
+        <strong id="today"></strong>
+      </div>
+
+      <form id="attendanceForm">
+        <label>Nama Anggota</label>
+        <select id="member" required>
+          <option value="">Memuat nama anggota...</option>
+        </select>
+
+        <label>Status Kehadiran</label>
+        <select id="status" required>
+          <option value="">Pilih status</option>
+          <option value="Hadir">Hadir poin diatas 600</option>
+          <option value="Hadir">Hadir poin dibawah 600</option>
+        </select>
+
+        <label>Keterangan (Opsional)</label>
+        <textarea id="note" placeholder="Masukkan keterangan..."></textarea>
+
+        <button id="submitBtn" type="submit">
+          KIRIM ABSENSI →
+        </button>
+
+        <p id="message"></p>
+      </form>
+    </section>
+
+    <footer>
+      <a href="admin.html">Login Admin</a>
+      <p>© 2026 Olympus Legacy Club</p>
+    </footer>
+  </main>
+</body>
+</html>
